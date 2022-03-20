@@ -37,7 +37,7 @@ function enter(event){
 
 // ask for geolocation on load
 window.addEventListener('load', () => {
-    if ("geolocation" in navigator) {
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(setPosition, showError);
     }
     else {
