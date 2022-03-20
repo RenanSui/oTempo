@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
 
 // fetch api lat-lon
 function coordResults(lat, long) {
-    fetch(`${api.base}weather?lat=${lat}&lon=${long}&units=metric&appid=${api.key}`)
+    fetch(`${api.base}weather?lat=${lat}&lon=${long}&appid=${api.key}`)
         .then(response => {            
             if(!response.ok) {
                 throw new Error(`http error: status ${response.status}`)
